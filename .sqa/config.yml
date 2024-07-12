@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/mattiaBarbo/provaDocker1:
+      branch: main
+      repo: https://github.com/mattiaBarbo/provaDocker1
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-myrtle-bee.sh
+        container: qc.acc_wimpy-amethyst-elephant
+  QC.Doc:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-chartreuse-walrus.sh
+        container: qc.doc_crabby-heliotrope-buzzard
+      github.com/mattiaBarbo/provaDocker1 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-xanthic-whale.sh
+        container: qc.doc_woolly-lemon-affenpinscher
+      github.com/mattiaBarbo/provaDocker1 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-beige-ragdoll.sh
+        container: qc.doc_messy-copper-maltese
+  QC.Lic:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-rust-molly.sh
+        container: qc.lic_squeaky-carmine-ostrich
+  QC.Sec:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-corn-dolphin.sh
+        container: qc.sec_grumpy-yellow-lemur
+  QC.Sty:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-pink-sparrow.sh
+        container: qc.sty_snappy-cardinal-crab
+      github.com/mattiaBarbo/provaDocker1 hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-gamboge-argentino.sh
+        container: qc.sty_flabby-amber-zonkey
+  QC.Uni:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-turquoise-giraffe.sh
+        container: qc.uni_messy-scarlet-blue
+  QC.Ver:
+    repos:
+      github.com/mattiaBarbo/provaDocker1 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-cinnamon-robin.sh
+        container: qc.ver_frumpy-cinnabar-spaniel
+timeout: 5400
