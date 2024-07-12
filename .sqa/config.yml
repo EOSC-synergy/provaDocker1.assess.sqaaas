@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/mattiaBarbo/provaDocker1 git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-myrtle-bee.sh
-        container: qc.acc_wimpy-amethyst-elephant
+        - /usr/bin/env sh .sqa/script.flaky-amber-dollar.sh
+        container: qc.acc_skinny-periwinkle-rottweiler
   QC.Doc:
     repos:
       github.com/mattiaBarbo/provaDocker1 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-chartreuse-walrus.sh
-        container: qc.doc_crabby-heliotrope-buzzard
+        - /usr/bin/env sh .sqa/script.zippy-jade-tzu.sh
+        container: qc.doc_surly-lime-squirrel
       github.com/mattiaBarbo/provaDocker1 git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-xanthic-whale.sh
-        container: qc.doc_woolly-lemon-affenpinscher
+        - /usr/bin/env sh .sqa/script.foggy-zucchini-penguin.sh
+        container: qc.doc_zippy-champagne-foxhound
       github.com/mattiaBarbo/provaDocker1 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-beige-ragdoll.sh
-        container: qc.doc_messy-copper-maltese
+        - /usr/bin/env sh .sqa/script.lanky-brass-liger.sh
+        container: qc.doc_wheezy-lilac-fish
   QC.Lic:
     repos:
       github.com/mattiaBarbo/provaDocker1 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-rust-molly.sh
-        container: qc.lic_squeaky-carmine-ostrich
+        - /usr/bin/env sh .sqa/script.sickly-amethyst-axolotl.sh
+        container: qc.lic_lanky-chocolate-crane
   QC.Sec:
     repos:
       github.com/mattiaBarbo/provaDocker1 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-corn-dolphin.sh
-        container: qc.sec_grumpy-yellow-lemur
+        - /usr/bin/env sh .sqa/script.wiggy-white-guppy.sh
+        container: qc.sec_baggy-olive-chin
   QC.Sty:
     repos:
       github.com/mattiaBarbo/provaDocker1 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-pink-sparrow.sh
-        container: qc.sty_snappy-cardinal-crab
+        - /usr/bin/env sh .sqa/script.wheezy-xanthic-turkey.sh
+        container: qc.sty_randy-maroon-caterpillar
       github.com/mattiaBarbo/provaDocker1 hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-gamboge-argentino.sh
-        container: qc.sty_flabby-amber-zonkey
+        - /usr/bin/env sh .sqa/script.scaly-champagne-barracuda.sh
+        container: qc.sty_sleepy-violet-bordeaux
   QC.Uni:
     repos:
       github.com/mattiaBarbo/provaDocker1 commands:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-turquoise-giraffe.sh
-        container: qc.uni_messy-scarlet-blue
+        - /usr/bin/env sh .sqa/script.surly-cinnabar-centipede.sh
+        container: qc.uni_tasty-heliotrope-magpie
   QC.Ver:
     repos:
       github.com/mattiaBarbo/provaDocker1 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-cinnamon-robin.sh
-        container: qc.ver_frumpy-cinnabar-spaniel
+        - /usr/bin/env sh .sqa/script.gamy-cardinal-bombay.sh
+        container: qc.ver_sleepy-purple-bat
 timeout: 5400
